@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+
+    <div ng-app="hangmanApp" ng-controller="mainCtrl">
+      <ul>
+        <li ng-repeat="thing in things">{{thing}}</li>
+      </ul>
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+</html>
