@@ -9,10 +9,11 @@
   </head>
   <body>
 
-    <div ng-app="hangmanApp" ng-controller="mainCtrl">
+    <div ng-app="hangmanApp" ng-controller="appCtrl">
       <ul>
         <li ng-repeat="thing in things">{{thing}}</li>
       </ul>
+      <app-dir thing='BANJOZ'></app-dir>
     </div>
 
   </body>

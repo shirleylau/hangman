@@ -1,11 +1,21 @@
-angular.module('hangmanApp', []);
+angular.module('hangmanApp', [])
+  .controller('appCtrl', appCtrl)
+  .directive('appDir', appDir);
 
-angular
-  .module('hangmanApp')
-  .controller('mainCtrl', mainCtrl);
+function appCtrl($scope) {
+  console.log('CTRL');
+  $scope.things = ['Pianos', 'Strangbeans', 'Jam'];
+}
 
-function mainCtrl($scope) {
-
-  console.log('main');
-  $scope.things = ['Hoola', 'Bongos', 'Burp'];
+function appDir() {
+  return {
+    restrict: 'E',
+    scope: {
+      thing: '@'
+    },
+    template: '<h2>Yoohoo, friend! I like {{thing}} a lot.<h2>',
+    controller: function ($scope) {
+      console.log('DIR');
+    }
+  }
 }
